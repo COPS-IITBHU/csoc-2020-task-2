@@ -1,0 +1,49 @@
+{% extends "store/base.html" %}
+
+{% block title %}
+<title>{{book.title}} | Library</title>
+{% endblock %}
+
+{% block content %}
+<h2>Title: {{ book.title }}</h2>
+
+<dl>
+    <dt>Genre:</dt>
+    <dd>{{book.genre}}</dd>
+    <dt>Author:</dt>
+    <dd>{{book.author}}</dd>
+    <dt>Description:</dt>
+    <dd>{{book.description}}</dd>
+    <dt>Rating:</dt>
+    <dd>{{book.rating}}</dd>
+    <dt>MRP:</dt>
+    <dd>Rs.{{book.mrp}}</dd>
+    <dt>Available Copies:</dt>
+    <dd>{{num_available}}</dd>
+</dl>
+<button class="btn btn-primary" id="loan-button">Loan {{book.title}}</button>
+<script>
+$("#loan-button").click(function(){
+    $.ajax({
+		url:"{% url 'loan-book' %}",
+		method:"POST",
+		data:{
+			bid: {{book.id}}
+		},
+		success:function(data,status,xhr){
+			if(data['message']==1){
+                alert("Book successfully issued");
+                window.location.replace("/books/loaned");
+			}
+			else{
+				alert("Unable to issue this book");
+			}
+		},
+		error:function(xhr,status,err){
+			alert("Some error occured");
+		}
+
+	})
+})
+</script>
+{% endblock %}
