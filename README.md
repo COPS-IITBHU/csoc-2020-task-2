@@ -58,7 +58,6 @@ You'll have a week to complete this task. Hence, the deadline of this task is 7t
 ## Submission
 * Follow the instructions to setup and run this project.
 * Complete the task by making the required changes in the files.
-* You do not need to put your files in a separate folder.
 * When done, commit your work locally and push it to your origin (forked repository).
 * Make a pull request to our repository, stating the tasks which you have completed.
 * Let us review your pull request.
