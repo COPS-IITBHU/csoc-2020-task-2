@@ -17,10 +17,10 @@ A very basic frontend has already been created for visualizing the results. You 
 #### Stage 1 (50 Points)
 Complete the following views without altering the frontend. Necessary details have been mentioned as comments in the views themselves.
 
-* Book Detail View (10 Points)
-* Book List View (20 Points)
-* View Loaned Books (10 Points)
-* Issue a Book (10 Points)
+* Book Detail View
+* Book List View
+* View Loaned Books
+* Issue a Book
 
 #### Stage 2 (30 Points)
 Complete the view for returning an issued book. You need to write this view all by yourself. Your view will accept book id as an argument and mark the appropriate book-copy as returned and return an appropriate response. You additionally need to write the javascript code to make a POST request to your view and display an appropriate message to the user after the response arrives.
