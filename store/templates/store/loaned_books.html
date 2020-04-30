@@ -24,12 +24,12 @@
     <tbody>
         {% for copy in books %}
         <tr>
-        <th scope="row">{{forloop.counter}}</th>
-        <td><a href="/book/{{copy.book.id}}">{{copy.book.title}}</a></td>
-        <td>{{copy.book.author}}</td>
-        <td>{{copy.book.genre}}</td>
-        <td>{{copy.borrow_date}}</td>
-        <td><button class="btn btn-primary" onclick="returnBook({{copy.book.bid}})">Return {{copy.book.title}}</button></td>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td><a href="/book/{{copy.book.id}}/">{{ copy.book.title }}</a></td>
+        <td>{{ copy.book.author }}</td>
+        <td>{{ copy.book.genre }}</td>
+        <td>{{ copy.borrow_date }}</td>
+        <td><button class="btn btn-primary" onclick="returnBook({{ copy.id }})">Return {{ copy.book.title }}</button></td>
         </tr>
         {% endfor %}
     </tbody>
